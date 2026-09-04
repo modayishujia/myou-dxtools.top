@@ -112,6 +112,16 @@
   .cases-empty .big{font-size:34px;margin-bottom:12px}
   .cases-empty h3{font-size:18px;margin-bottom:8px}
   .cases-empty p{color:var(--ink2);font-size:14px;max-width:520px;margin:0 auto}
+  .case-card{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.2s}
+  .case-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(15,23,42,.1);text-decoration:none;border-color:#bae6fd}
+  .case-img{background:#f1f5f9;border-bottom:1px solid var(--line)}
+  .case-img img{width:100%;height:auto;display:block}
+  .case-body{padding:20px 22px 22px}
+  .case-body .tag{display:inline-block;font-size:12px;color:#0891b2;background:#ecfeff;border:1px solid #bae6fd;border-radius:999px;padding:3px 10px;margin-bottom:10px}
+  .case-body h3{font-size:16.5px;font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.5}
+  .case-body p{font-size:13.5px;color:var(--ink2);margin-bottom:12px}
+  .case-body .more{font-size:13.5px;font-weight:700;color:var(--accent)}
+  .cases-note{margin-top:20px;text-align:center;color:var(--ink3);font-size:13.5px}
 
   /* contact */
   .contact{background:linear-gradient(160deg,#1a1a2e,#0f172a);border-radius:20px;color:#fff;padding:56px 40px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
@@ -265,11 +275,18 @@
       <h2>常规案例</h2>
       <p>真实调研案例整理中，将陆续以 PDF 形式在此补充。</p>
     </div>
-    <div class="cases-empty">
-      <div class="big">🗂️</div>
-      <h3>案例区待补充</h3>
-      <p>正在整理典型话题的完整调研记录（含数据、分析与复盘）。上线后此处会按品类汇总：汽车 / 3C / 消费 / 金融 / 快消等。</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px">
+      <a class="case-card" href="cases/玄戒O3舆情调研报告.pdf" target="_blank" rel="noopener">
+        <div class="case-img"><img src="cases/玄戒O3缩略图.png" alt="玄戒O3舆情调研报告封面" loading="lazy"></div>
+        <div class="case-body">
+          <span class="tag">3C · 舆情传播调研</span>
+          <h3>玄戒O3：破了数码圈的天花板，没破数码圈的墙</h3>
+          <p>B站单条视频 269.7 万播放、第 36 周环比衰减 90.4%、头部集中度 32.4%、受话者"超出预期"61.4%——完整报告含传播效率、触达人群与破圈点分析。</p>
+          <span class="more">查看完整报告 PDF →</span>
+        </div>
+      </a>
     </div>
+    <div class="cases-note">更多案例整理中，将陆续补充</div>
   </div>
 </section>
 
