@@ -297,8 +297,11 @@
 
 <script>
 function copyCode(btn){
-  const pre=btn.closest('pre');if(!pre)return;
-  copyText(pre.innerText,btn);
+  const head=btn.closest('.code-head');
+  const pre=(head&&head.nextElementSibling)||btn.closest('pre');
+  const text=pre&&pre.tagName==='PRE'? pre.innerText.trim() : '';
+  if(!text)return;
+  copyText(text,btn);
 }
 function copyPrompt(el){
   copyText(el.querySelector('.q').innerText,null);
